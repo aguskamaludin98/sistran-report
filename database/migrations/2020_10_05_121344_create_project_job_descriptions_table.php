@@ -18,7 +18,7 @@ class CreateProjectJobDescriptionsTable extends Migration
             $table->unsignedInteger('id_project');
             $table->foreign('id_project')->references('id')->on('projects')->onUpdate('cascade')->onDelete('cascade');
             $table->unsignedInteger('id_job_description');
-            $table->foreign('id_job_descriptiono')->references('id')->on('job_descriptions')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_job_description')->references('id')->on('job_descriptions')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('job_description_qty');
             $table->timestamps();
         });
