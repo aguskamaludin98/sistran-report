@@ -18,7 +18,7 @@ class CreateProjectEquipmentsTable extends Migration
             $table->unsignedInteger('id_project');
             $table->foreign('id_project')->references('id')->on('projects')->onUpdate('cascade')->onDelete('cascade');
             $table->unsignedInteger('id_equipment');
-            $table->foreign('id_equipment')->references('id')->on('equipments')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_equipment')->references('id')->on('equipment')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('equipment_qty');
             $table->timestamps();
         });
