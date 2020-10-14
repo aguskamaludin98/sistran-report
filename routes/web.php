@@ -19,12 +19,12 @@ Auth::routes();
 Route::get('/logout','Auth\LoginController@logout')->name('logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin-panel', function () {
-    return view('layouts.main');
-});
 
 //Admin
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
+Route::group(['prefix' => 'admin-panel', 'namespace' => 'Admin', 'middleware' => 'web'], function(){
+    Route::get('/', function () {
+        return view('layouts.main');
+    });
 
     Route::group(['prefix' => 'problem'], function(){
         Route::get('/data-master', 'ProblemController@index')->name('data-problem');
@@ -32,5 +32,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
 
      Route::group(['prefix'=>'equipment'], function() {
         Route::get('/data-master', 'EquipmentController@index')->name('data-equipment');
+        Route::get('/add', 'EquipmentController@create')->name('add-equipment');
+        Route::post('/create', 'EquipmentController@store')->name('create-equipment');
      });
 });
