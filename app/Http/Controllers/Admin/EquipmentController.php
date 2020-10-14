@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\equipment;
 
 class EquipmentController extends Controller
 {
@@ -14,7 +15,8 @@ class EquipmentController extends Controller
      */
     public function index()
     {
-        return view('admin.equipment.equipmentMasterData');
+        $equipment = equipment::all();
+        return view('admin.equipment.equipmentMasterData', compact('equipment'));
     }
 
     /**
@@ -24,7 +26,7 @@ class EquipmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.equipment.addEquipment');
     }
 
     /**
@@ -35,7 +37,15 @@ class EquipmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $equipment = new equipment();
+        try{
+            $equipment->equipment_name = $request->name;
+            $equipment->description = $request->description;
+            $equipment->save();
+        }catch(\Exception $exception){
+            return redirect()->route('data-equipment')->with('alert','Terjadi kesalahan, silahkan coba lagi!');
+        }
+        return redirect()->route('data-equipment')->with('success','Data Telah Masuk');
     }
 
     /**
