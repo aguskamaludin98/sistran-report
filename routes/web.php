@@ -22,3 +22,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin-panel', function () {
     return view('layouts.main');
 });
+
+//Admin
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
+
+    Route::group(['prefix' => 'problem'], function(){
+        Route::get('/data-master', 'ProblemController@index')->name('data-problem');
+     });
+
+});

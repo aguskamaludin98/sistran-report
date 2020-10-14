@@ -176,7 +176,7 @@
                                             <a class="nav-link" href="pages/accordions.html"><i class="fas fa-fw fa-table"></i>Equipment Data</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/tabs.html"><i class="fas fa-fw fa-table"></i>Problem Data</a>
+                                            <a class="nav-link" href="{{route('data-problem')}}"><i class="fas fa-fw fa-table"></i>Problem Data</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -217,26 +217,11 @@
                     <!-- ============================================================== -->
                     <!-- pageheader  -->
                     <!-- ============================================================== -->
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="page-header">
-                                <h3 class="mb-2">Finance Dashboard </h3>
-                                <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
-                                <div class="page-breadcrumb">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Finance Dashboard Template</li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   @yield('content')
                     <!-- ============================================================== -->
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
-                    
+
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -246,7 +231,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>. 
+                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">
