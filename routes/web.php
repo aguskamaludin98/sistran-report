@@ -28,6 +28,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
 
     Route::group(['prefix' => 'problem'], function(){
         Route::get('/data-master', 'ProblemController@index')->name('data-problem');
+        Route::get('/add', 'ProblemController@create')->name('add-problem');
+        Route::post('/create', 'ProblemController@store')->name('create-problem');
      });
 
      Route::group(['prefix'=>'equipment'], function() {

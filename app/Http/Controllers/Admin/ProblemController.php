@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\problem
 
 class ProblemController extends Controller
 {
@@ -24,7 +25,7 @@ class ProblemController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.problem.addProblem');//
     }
 
     /**
@@ -35,7 +36,14 @@ class ProblemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $problem = new problem();
+        try{
+            $problem->problem_name = $request->name;
+            $problem->description = $request->description;
+            $problem->save();
+        }catch{\Exception $exception
+
+        }
     }
 
     /**
