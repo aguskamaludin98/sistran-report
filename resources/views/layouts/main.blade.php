@@ -180,7 +180,7 @@
                                             <a class="nav-link" href="{{route('data-equipment')}}"><i class="fas fa-fw fa-table"></i>Equipment Data</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/tabs.html"><i class="fas fa-fw fa-table"></i>Problem Data</a>
+                                            <a class="nav-link" href="{{route('data-problem')}}"><i class="fas fa-fw fa-table"></i>Problem Data</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -221,11 +221,11 @@
                     <!-- ============================================================== -->
                     <!-- pageheader  -->
                     <!-- ============================================================== -->
-                    @yield('content')
+                   @yield('content')
                     <!-- ============================================================== -->
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
-                    
+
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -235,7 +235,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>. 
+                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">

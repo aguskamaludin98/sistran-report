@@ -24,7 +24,11 @@ Route::get('/admin-panel', function () {
 });
 
 //Admin
-Route::group(['prefix'=>'admin', 'namespace'=>'Admin'], function() {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
+
+    Route::group(['prefix' => 'problem'], function(){
+        Route::get('/data-master', 'ProblemController@index')->name('data-problem');
+     });
 
      Route::group(['prefix'=>'equipment'], function() {
         Route::get('/data-master', 'EquipmentController@index')->name('data-equipment');
