@@ -49,4 +49,10 @@ Route::group(['prefix' => 'admin-panel', 'namespace' => 'Admin', 'middleware' =>
         Route::get('/add', 'PlanController@create')->name('add-plan');
         Route::post('/create', 'PlanController@store')->name('create-plan');
      });
+
+     Route::group(['prefix'=>'user'], function() {
+        Route::get('/data-master', 'UserController@index')->name('data-user');
+        Route::get('/add', 'UserController@create')->name('add-user');
+        Route::post('/create', 'UserController@store')->name('create-user');
+     });
 });

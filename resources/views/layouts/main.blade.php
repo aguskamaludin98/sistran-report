@@ -162,7 +162,7 @@
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/cards.html"><i class="fas fa-fw fa-table"></i>Manage Role</a>
+                                            <a class="nav-link" href="{{route('data-user')}}"><i class="fas fa-fw fa-table"></i>Manage Role</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/general.html"><i class="fas fa-fw fa-table"></i>Personal Data</a>
