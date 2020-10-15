@@ -17,19 +17,11 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Project Number</label>
-                        <input id="number" type="text" name="number" class="form-control">
+                        <input id="name" type="text" name="number" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="description">Project Location</label>
-                        <input id="location" type="text" name="location" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="created_at">Created At</label>
-                        <input id="created_at" type="text" name="created_At" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="updated_At">Updated At</label>
-                        <input id="updated_At" type="text" name="updated_at" class="form-control">
+                        <input id="name" type="text" name="location" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-primary float-right">Save</button>
                 </form>

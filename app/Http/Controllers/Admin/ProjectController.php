@@ -26,7 +26,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.project.addproject');//
+        return view('admin.project.addProject');//
     }
 
     /**
@@ -39,9 +39,9 @@ class ProjectController extends Controller
     {
         $project = new project();
         try{
-            $project->project_name = $request->name;
-            $project->number = $request->number;
-            $project->location = $request->location;
+            $project->name_project = $request->name;
+            $project->no_project = $request->number;
+            $project->location_project = $request->location;
             $project->save();
         }catch(\Exception $exception){
             return redirect()->route('data-project')->with('alert','Terjadi kesalahan, silahkan coba lagi!');

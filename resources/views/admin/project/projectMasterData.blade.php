@@ -35,8 +35,6 @@
                                 <th>Name</th>
                                 <th>Project Number</th>
                                 <th>Project Location</th>
-                                <th>Created At</th>
-                                <th>Updated At</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -44,11 +42,9 @@
                         <?php $i=1; foreach ($project as $projects):?>
                           <tr>
                               <td>{{$i}}</td>
-                              <td>{{$projects->project_name}}</td>
-                              <td>{{$projects->number}}</td>
-                              <td>{{$projects->location}}</td>
-                              <td>{{$projects->created_at}}</td>
-                              <td>{{$projects->updated_at}}</td>
+                              <td>{{$projects->name_project}}</td>
+                              <td>{{$projects->no_project}}</td>
+                              <td>{{$projects->location_project}}</td>
                               <td class="td-actions text-right">
                                 <a href="" type="button" class="btn btn-primary btn-link btn-sm">
                                     <i class="fa fa-pencil"></i>
