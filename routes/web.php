@@ -37,4 +37,10 @@ Route::group(['prefix' => 'admin-panel', 'namespace' => 'Admin', 'middleware' =>
         Route::get('/add', 'EquipmentController@create')->name('add-equipment');
         Route::post('/create', 'EquipmentController@store')->name('create-equipment');
      });
+
+     Route::group(['prefix'=>'plan'], function() {
+        Route::get('/data-master', 'PlanController@index')->name('data-plan');
+        Route::get('/add', 'PlanController@create')->name('add-plan');
+        Route::post('/create', 'PlanController@store')->name('create-plan');
+     });
 });
