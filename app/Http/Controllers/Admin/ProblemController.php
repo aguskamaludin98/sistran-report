@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\problem
+use App\problem;
 
 class ProblemController extends Controller
 {
@@ -15,7 +15,8 @@ class ProblemController extends Controller
      */
     public function index()
     {
-        return view('admin.problem.problemMasterData');
+        $problem = problem::all();
+        return view('admin.problem.problemMasterData', compact('problem'));
     }
 
     /**
@@ -41,9 +42,11 @@ class ProblemController extends Controller
             $problem->problem_name = $request->name;
             $problem->description = $request->description;
             $problem->save();
-        }catch{\Exception $exception
-
+        }catch(\Exception $exception){
+            return redirect()->route('data-problem')->with('alert','Terjadi kesalahan, silahkan coba lagi!');
         }
+        return redirect()->route('data-problem')->with('success','Data Telah Masuk');
+
     }
 
     /**

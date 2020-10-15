@@ -38,11 +38,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                            </tr>
+                        <?php $i=1; foreach ($problem as $problems):?>
+                          <tr>
+                              <td>{{$i}}</td>
+                              <td>{{$problems->problem_name}}</td>
+                              <td>{{$problems->description}}</td>
+                              <td class="td-actions text-right">
+                                <a href="" type="button" class="btn btn-primary btn-link btn-sm">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a href="" class="btn btn-danger btn-link btn-sm">
+                                    <i class="fa fa-delete"></i>
+                                </a>
+                              </td>
+                          </tr>
+                          <?php $i++; endforeach;?>
                         </tbody>
                     </table>
                 </div>
