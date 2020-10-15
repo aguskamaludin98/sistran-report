@@ -38,11 +38,17 @@ Route::group(['prefix' => 'admin-panel', 'namespace' => 'Admin', 'middleware' =>
         Route::post('/create', 'EquipmentController@store')->name('create-equipment');
      });
 
+     Route::group(['prefix'=>'project'], function() {
+        Route::get('/data-master', 'ProjectController@index')->name('data-project');
+        Route::get('/add', 'ProjectController@create')->name('add-project');
+        Route::post('/create', 'ProjectController@store')->name('create-project');
+     });
+
      Route::group(['prefix'=>'job_description'], function() {
         Route::get('/data-master', 'JobdescController@index')->name('data-job_description');
         Route::get('/add', 'JobdescController@create')->name('add-job_description');
         Route::post('/create', 'JobdescController@store')->name('create-job_description');
-      });
+     });
 
      Route::group(['prefix'=>'plan'], function() {
         Route::get('/data-master', 'PlanController@index')->name('data-plan');

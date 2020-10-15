@@ -168,7 +168,7 @@
                                             <a class="nav-link" href="pages/general.html"><i class="fas fa-fw fa-table"></i>Personal Data</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/carousel.html"><i class="fas fa-fw fa-table"></i>Project Data</a>
+                                            <a class="nav-link" href="{{route('data-project')}}"><i class="fas fa-fw fa-table"></i>Project Data</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{route('data-job_description')}}"><i class="fas fa-fw fa-table"></i>Job Description Data</a>
