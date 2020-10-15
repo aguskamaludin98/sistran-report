@@ -171,7 +171,7 @@
                                             <a class="nav-link" href="pages/carousel.html"><i class="fas fa-fw fa-table"></i>Project Data</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/listgroup.html"><i class="fas fa-fw fa-table"></i>Job Description Data</a>
+                                            <a class="nav-link" href="{{route('data-job_description')}}"><i class="fas fa-fw fa-table"></i>Job Description Data</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/typography.html"><i class="fas fa-fw fa-table"></i>Plan Data</a>
