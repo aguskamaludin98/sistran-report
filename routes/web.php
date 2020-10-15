@@ -42,6 +42,7 @@ Route::group(['prefix' => 'admin-panel', 'namespace' => 'Admin', 'middleware' =>
         Route::get('/data-master', 'JobdescController@index')->name('data-job_description');
         Route::get('/add', 'JobdescController@create')->name('add-job_description');
         Route::post('/create', 'JobdescController@store')->name('create-job_description');
+      });
 
      Route::group(['prefix'=>'plan'], function() {
         Route::get('/data-master', 'PlanController@index')->name('data-plan');
