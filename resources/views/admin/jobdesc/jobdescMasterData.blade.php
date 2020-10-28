@@ -63,7 +63,7 @@
                                 <a href="{{route('edit-job_description', $job_descriptions->id)}}" type="button" class="btn btn-primary btn-link btn-sm">
                                     <i class="fa fa-pencil"></i>Edit
                                 </a>
-                                <a href="" class="btn btn-danger btn-link btn-sm">
+                                <a href="{{route('destroy-job_description', $job_descriptions->id)}}" class="btn btn-danger btn-link btn-sm">
                                     <i class="fa fa-delete"></i>Delete
                                 </a>
                               </td>

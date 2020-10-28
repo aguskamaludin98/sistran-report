@@ -9,7 +9,7 @@
       <div class="card">
           <h5 class="card-header">Edit</h5>
           <div class="card-body">
-              <form method="POST" action="{{route('create-job_description')}}">
+              <form method="POST" action="{{route('update-job_description', $job_description->id)}}">
                 {{ csrf_field() }}
                   <div class="form-group">
                       <label for="name" class="col-form-label">Job Description Name</label>
