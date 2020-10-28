@@ -67,7 +67,9 @@ class JobdescController extends Controller
      */
     public function edit($id)
     {
-        //
+        $job_description = job_description::findOrFail($id);
+
+        return view('admin.jobdesc.editJobdesc', compact('job_description'));
     }
 
     /**

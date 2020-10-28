@@ -60,11 +60,11 @@
                               <td>{{$job_descriptions->job_description_name}}</td>
                               <td>{{$job_descriptions->description}}</td>
                               <td class="td-actions text-right">
-                                <a href="" type="button" class="btn btn-primary btn-link btn-sm">
-                                    <i class="fa fa-pencil"></i>
+                                <a href="{{route('edit-job_description', $job_descriptions->id)}}" type="button" class="btn btn-primary btn-link btn-sm">
+                                    <i class="fa fa-pencil"></i>Edit
                                 </a>
                                 <a href="" class="btn btn-danger btn-link btn-sm">
-                                    <i class="fa fa-delete"></i>
+                                    <i class="fa fa-delete"></i>Delete
                                 </a>
                               </td>
                           </tr>
