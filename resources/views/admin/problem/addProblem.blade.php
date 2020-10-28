@@ -7,7 +7,7 @@
             <p>Use custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
         </div>
         <div class="card">
-            <h5 class="card-header">Basic Form</h5>
+            <h5 class="card-header">Add Problem Form</h5>
             <div class="card-body">
                 <form action="{{route('create-problem')}}" method="POST">
                     {{ csrf_field() }}

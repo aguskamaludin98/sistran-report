@@ -32,7 +32,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Name</th>
+                                <th>Problem Name</th>
                                 <th>Description</th>
                                 <th>Action</th>
                             </tr>
