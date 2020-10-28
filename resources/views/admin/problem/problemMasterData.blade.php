@@ -44,11 +44,11 @@
                               <td>{{$problems->problem_name}}</td>
                               <td>{{$problems->description}}</td>
                               <td class="td-actions text-right">
-                                <a href="" type="button" class="btn btn-primary btn-link btn-sm">
-                                    <i class="fa fa-pencil"></i>
+                                <a href="{{route('edit-problem', $problems->id)}}" type="button" class="btn btn-primary btn-link btn-sm">
+                                    <i class="fa fa-pencil"></i>Edit
                                 </a>
                                 <a href="" class="btn btn-danger btn-link btn-sm">
-                                    <i class="fa fa-delete"></i>
+                                    <i class="fa fa-delete"></i>Delete
                                 </a>
                               </td>
                           </tr>

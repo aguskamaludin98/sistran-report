@@ -30,6 +30,7 @@ Route::group(['prefix' => 'admin-panel', 'namespace' => 'Admin', 'middleware' =>
         Route::get('/data-master', 'ProblemController@index')->name('data-problem');
         Route::get('/add', 'ProblemController@create')->name('add-problem');
         Route::post('/create', 'ProblemController@store')->name('create-problem');
+        Route::get('/edit/{id}', 'ProblemController@edit')->name('edit-problem');
      });
 
      Route::group(['prefix'=>'equipment'], function() {
