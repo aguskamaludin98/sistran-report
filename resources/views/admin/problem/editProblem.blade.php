@@ -9,7 +9,7 @@
         <div class="card">
             <h5 class="card-header">Basic Form</h5>
             <div class="card-body">
-                <form action="{{route('create-problem')}}" method="POST">
+                <form action="{{route('update-problem', $problem->id)}}" method="GET">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="name" class="col-form-label">Problem Name</label>

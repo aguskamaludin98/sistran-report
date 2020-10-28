@@ -47,7 +47,7 @@
                                 <a href="{{route('edit-problem', $problems->id)}}" type="button" class="btn btn-primary btn-link btn-sm">
                                     <i class="fa fa-pencil"></i>Edit
                                 </a>
-                                <a href="" class="btn btn-danger btn-link btn-sm">
+                                <a href="{{route('destroy-problem', $problems->id)}}" class="btn btn-danger btn-link btn-sm">
                                     <i class="fa fa-delete"></i>Delete
                                 </a>
                               </td>

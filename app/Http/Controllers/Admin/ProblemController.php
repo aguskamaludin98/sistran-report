@@ -68,7 +68,9 @@ class ProblemController extends Controller
      */
     public function edit($id)
     {
-        //
+        $problem = problem::findOrFail($id);
+
+        return view('admin.problem.editProblem', compact('problem'));
     }
 
     /**
@@ -80,7 +82,16 @@ class ProblemController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $problem = problem::findOrFail($id);
+        try{
+            $problem->problem_name = $request->name;
+            $problem->description = $request->description;
+            $problem->update();
+
+        }catch(\Exception $exception){
+            return redirect()->route('data-problem')->with('alert','Terjadi kesalahan, silahkan coba lagi!');
+        }
+        return redirect()->route('data-problem')->with('success','Data Berhasil diubah');
     }
 
     /**
@@ -91,6 +102,12 @@ class ProblemController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $problem = problem::findOrFail($id);
+            $problem->delete();
+        }catch(\Exception $exception){
+            return redirect()->route('data-problem')->with('alert','Terjadi kesalahan, silahkan coba lagi!');
+        }
+        return redirect()->route('data-problem')->with('success','Data Berhasil dihapus');
     }
 }
