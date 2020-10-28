@@ -67,7 +67,9 @@ class JobdescController extends Controller
      */
     public function edit($id)
     {
-        //
+        $job_description = job_description::findOrFail($id);
+
+        return view('admin.jobdesc.editJobdesc', compact('job_description'));
     }
 
     /**
@@ -79,7 +81,15 @@ class JobdescController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $job_description = job_description::findOrFail($id);
+        try{
+            $job_description->job_description_name = $request->name;
+            $job_description->description = $request->description;
+            $job_description->update();
+        }catch(\Exception $exception){
+            return redirect()->route('data-job_description')->with('alert','Terjadi kesalahan, silahkan coba lagi!');
+        }
+        return redirect()->route('data-job_description')->with('success','Data Telah Update');
     }
 
     /**
@@ -90,6 +100,12 @@ class JobdescController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $job_description = job_description::findOrFail($id);
+            $job_description->delete();
+        }catch(\Exception $exception){
+            return redirect()->route('data-job_description')->with('alert','Terjadi kesalahan, silahkan coba lagi!');
+        }
+        return redirect()->route('data-job_description')->with('success','Data Telah Terhapus');
     }
 }

@@ -48,6 +48,9 @@ Route::group(['prefix' => 'admin-panel', 'namespace' => 'Admin', 'middleware' =>
         Route::get('/data-master', 'JobdescController@index')->name('data-job_description');
         Route::get('/add', 'JobdescController@create')->name('add-job_description');
         Route::post('/create', 'JobdescController@store')->name('create-job_description');
+        Route::get('/edit/{id}', 'JobdescController@edit')->name('edit-job_description');
+        Route::post('/update/{id}', 'JobdescController@update')->name('update-job_description');
+        Route::get('/destroy/{id}', 'JobdescController@destroy')->name('destroy-job_description');
      });
 
      Route::group(['prefix'=>'plan'], function() {
